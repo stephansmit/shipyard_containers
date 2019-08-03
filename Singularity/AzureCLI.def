@@ -1,0 +1,39 @@
+# Singularity for Azure-CLI
+Bootstrap: docker
+From: debian:jessie
+
+%environment
+    AZURE_CLI_VERSION= "0.10.17"
+    NODEJS_APT_ROOT="node_6.x"
+    NODEJS_VERSIONi="6.11.3"
+    export AZURE_CLI_VERSION
+    export NODEJS_APT_ROOT
+    export NODEJS_VERSION
+
+%post
+apt-get update -qq && \
+  apt-get install -y curl && \
+  curl -sL https://deb.nodesource.com/setup_12.x | bash - &&
+  apt-get install -y nodejs && \
+  apt-get install -y -qqy --no-install-recommends\
+      apt-transport-https \
+      build-essential \
+      curl \
+      ca-certificates \
+      git \
+      lsb-release \
+      python-all \
+      rlwrap \
+      vim \
+      nano \
+      jq && \
+  rm -rf /var/lib/apt/lists/* && \
+      npm install --global azure-cli@${AZURE_CLI_VERSION} && \
+      azure --completion >> ~/azure.completion.sh && \
+      echo 'source ~/azure.completion.sh' >> ~/.bashrc && \
+      azure
+
+
+%runscript
+exec azure config mode arm
+
