@@ -1,0 +1,5 @@
+AZURE_CREDS
+BATCH_CREDS
+SHIPYARD_CREDS
+*.sif
+credentials.yaml
