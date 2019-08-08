@@ -1,326 +1,0 @@
-Linux ccf7470301a6428e8e6755f7a9b26251000000 4.15.0-1052-azure #57-Ubuntu SMP Tue Jul 23 19:07:16 UTC 2019 x86_64 x86_64 x86_64 GNU/Linux
-2019-08-08T16:37:37,288996641+00:00 - INFO - Prep start
-Configuration:
---------------
-Custom image: 0
-Native mode: 0
-OS Distribution: ubuntu 16.04
-Batch Shipyard version: 3.7.1
-Blobxfer version: 1.7.0
-Singularity version: 2.6.1
-User mountpoint: /mnt
-Mount path: /mnt/batch/tasks/mounts
-Batch Insights: 0
-Prometheus: NE=, CA=,
-Network optimization: 0
-Encryption cert thumbprint: 
-Install Kata Containers: 0
-Default container runtime: runc
-Install BeeGFS BeeOND: 0
-Storage cluster mount: 
-Custom mount: 
-Install LIS: 
-GPU: 
-Azure Blob: 0
-Azure File: 0
-GlusterFS on compute: 0
-HPN-SSH: 0
-Enable Azure Batch group for Docker access: 
-Fallback registry: 
-Docker image preload delay: 0
-Cascade via container: 1
-P2P: 0
-Block on images: #busybox-master-latest.simg
-
-2019-08-08T16:37:37,371100550+00:00 - INFO - LIS installation not required
-2019-08-08T16:37:37,378889461+00:00 - DEBUG - Installing Docker Host Engine
-Hit:1 http://azure.archive.ubuntu.com/ubuntu xenial InRelease
-Get:2 http://azure.archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
-Get:3 http://azure.archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]
-Get:4 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]
-Get:5 http://azure.archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [1,000 kB]
-Get:6 http://azure.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [758 kB]
-Get:7 http://azure.archive.ubuntu.com/ubuntu xenial-updates/universe Translation-en [317 kB]
-Get:8 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [711 kB]
-Get:9 http://security.ubuntu.com/ubuntu xenial-security/main Translation-en [281 kB]
-Get:10 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [451 kB]
-Get:11 http://security.ubuntu.com/ubuntu xenial-security/universe Translation-en [184 kB]
-Fetched 4,026 kB in 1s (2,736 kB/s)
-Reading package lists...
-Reading package lists...
-Building dependency tree...
-Reading state information...
-apt-transport-https is already the newest version (1.2.32).
-ca-certificates is already the newest version (20170717~16.04.2).
-curl is already the newest version (7.47.0-1ubuntu2.13).
-software-properties-common is already the newest version (0.96.20.8).
-The following additional packages will be installed:
-  gnupg-agent libassuan0 libksba8 libnpth0 pinentry-curses
-Suggested packages:
-  gnupg-doc parcimonie xloadimage pinentry-doc
-Recommended packages:
-  dirmngr
-The following NEW packages will be installed:
-  gnupg-agent gnupg2 libassuan0 libksba8 libnpth0 pinentry-curses
-0 upgraded, 6 newly installed, 0 to remove and 5 not upgraded.
-Need to get 1,159 kB of archives.
-After this operation, 3,467 kB of additional disk space will be used.
-Get:1 http://azure.archive.ubuntu.com/ubuntu xenial/main amd64 libassuan0 amd64 2.4.2-2 [34.6 kB]
-Get:2 http://azure.archive.ubuntu.com/ubuntu xenial/main amd64 pinentry-curses amd64 0.9.7-3 [31.2 kB]
-Get:3 http://azure.archive.ubuntu.com/ubuntu xenial/main amd64 libnpth0 amd64 1.2-3 [7,998 B]
-Get:4 http://azure.archive.ubuntu.com/ubuntu xenial-updates/main amd64 gnupg-agent amd64 2.1.11-6ubuntu2.1 [240 kB]
-Get:5 http://azure.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libksba8 amd64 1.3.3-1ubuntu0.16.04.1 [90.2 kB]
-Get:6 http://azure.archive.ubuntu.com/ubuntu xenial-updates/main amd64 gnupg2 amd64 2.1.11-6ubuntu2.1 [755 kB]
-Fetched 1,159 kB in 0s (28.5 MB/s)
-Selecting previously unselected package libassuan0:amd64.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53455 files and directories currently installed.)
-Preparing to unpack .../libassuan0_2.4.2-2_amd64.deb ...
-Unpacking libassuan0:amd64 (2.4.2-2) ...
-Processing triggers for libc-bin (2.23-0ubuntu11) ...
-Setting up libassuan0:amd64 (2.4.2-2) ...
-Processing triggers for libc-bin (2.23-0ubuntu11) ...
-Selecting previously unselected package pinentry-curses.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53460 files and directories currently installed.)
-Preparing to unpack .../pinentry-curses_0.9.7-3_amd64.deb ...
-Unpacking pinentry-curses (0.9.7-3) ...
-Processing triggers for man-db (2.7.5-1) ...
-Setting up pinentry-curses (0.9.7-3) ...
-Selecting previously unselected package libnpth0:amd64.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53468 files and directories currently installed.)
-Preparing to unpack .../libnpth0_1.2-3_amd64.deb ...
-Unpacking libnpth0:amd64 (1.2-3) ...
-Processing triggers for libc-bin (2.23-0ubuntu11) ...
-Setting up libnpth0:amd64 (1.2-3) ...
-Processing triggers for libc-bin (2.23-0ubuntu11) ...
-Selecting previously unselected package gnupg-agent.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53473 files and directories currently installed.)
-Preparing to unpack .../gnupg-agent_2.1.11-6ubuntu2.1_amd64.deb ...
-Unpacking gnupg-agent (2.1.11-6ubuntu2.1) ...
-Processing triggers for man-db (2.7.5-1) ...
-Setting up gnupg-agent (2.1.11-6ubuntu2.1) ...
-Selecting previously unselected package libksba8:amd64.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53494 files and directories currently installed.)
-Preparing to unpack .../libksba8_1.3.3-1ubuntu0.16.04.1_amd64.deb ...
-Unpacking libksba8:amd64 (1.3.3-1ubuntu0.16.04.1) ...
-Processing triggers for libc-bin (2.23-0ubuntu11) ...
-Setting up libksba8:amd64 (1.3.3-1ubuntu0.16.04.1) ...
-Processing triggers for libc-bin (2.23-0ubuntu11) ...
-Selecting previously unselected package gnupg2.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53502 files and directories currently installed.)
-Preparing to unpack .../gnupg2_2.1.11-6ubuntu2.1_amd64.deb ...
-Unpacking gnupg2 (2.1.11-6ubuntu2.1) ...
-Processing triggers for man-db (2.7.5-1) ...
-Processing triggers for install-info (6.1.0.dfsg.1-5) ...
-Setting up gnupg2 (2.1.11-6ubuntu2.1) ...
-OK
-Hit:1 http://azure.archive.ubuntu.com/ubuntu xenial InRelease
-Hit:2 http://azure.archive.ubuntu.com/ubuntu xenial-updates InRelease
-Hit:3 http://azure.archive.ubuntu.com/ubuntu xenial-backports InRelease
-Get:4 https://download.docker.com/linux/ubuntu xenial InRelease [66.2 kB]
-Hit:5 http://security.ubuntu.com/ubuntu xenial-security InRelease
-Get:6 https://download.docker.com/linux/ubuntu xenial/stable amd64 Packages [10.0 kB]
-Fetched 76.3 kB in 0s (184 kB/s)
-Reading package lists...
-Reading package lists...
-Building dependency tree...
-Reading state information...
-The following additional packages will be installed:
-  containerd.io libltdl7
-Recommended packages:
-  aufs-tools cgroupfs-mount | cgroup-lite pigz
-The following NEW packages will be installed:
-  containerd.io docker-ce docker-ce-cli libltdl7
-0 upgraded, 4 newly installed, 0 to remove and 5 not upgraded.
-Need to get 53.0 MB of archives.
-After this operation, 252 MB of additional disk space will be used.
-Get:1 http://azure.archive.ubuntu.com/ubuntu xenial/main amd64 libltdl7 amd64 2.4.6-0.1 [38.3 kB]
-Get:2 https://download.docker.com/linux/ubuntu xenial/stable amd64 containerd.io amd64 1.2.6-3 [22.6 MB]
-Get:3 https://download.docker.com/linux/ubuntu xenial/stable amd64 docker-ce-cli amd64 5:18.09.2~3-0~ubuntu-xenial [13.0 MB]
-Get:4 https://download.docker.com/linux/ubuntu xenial/stable amd64 docker-ce amd64 5:18.09.2~3-0~ubuntu-xenial [17.4 MB]
-Fetched 53.0 MB in 2s (25.0 MB/s)
-Selecting previously unselected package containerd.io.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53565 files and directories currently installed.)
-Preparing to unpack .../containerd.io_1.2.6-3_amd64.deb ...
-Unpacking containerd.io (1.2.6-3) ...
-Selecting previously unselected package libltdl7:amd64.
-Preparing to unpack .../libltdl7_2.4.6-0.1_amd64.deb ...
-Unpacking libltdl7:amd64 (2.4.6-0.1) ...
-Selecting previously unselected package docker-ce-cli.
-Preparing to unpack .../docker-ce-cli_5%3a18.09.2~3-0~ubuntu-xenial_amd64.deb ...
-Unpacking docker-ce-cli (5:18.09.2~3-0~ubuntu-xenial) ...
-Selecting previously unselected package docker-ce.
-Preparing to unpack .../docker-ce_5%3a18.09.2~3-0~ubuntu-xenial_amd64.deb ...
-Unpacking docker-ce (5:18.09.2~3-0~ubuntu-xenial) ...
-Processing triggers for libc-bin (2.23-0ubuntu11) ...
-Processing triggers for man-db (2.7.5-1) ...
-Processing triggers for ureadahead (0.100.0-19.1) ...
-Processing triggers for systemd (229-4ubuntu21.22) ...
-Setting up containerd.io (1.2.6-3) ...
-Setting up libltdl7:amd64 (2.4.6-0.1) ...
-Setting up docker-ce-cli (5:18.09.2~3-0~ubuntu-xenial) ...
-Setting up docker-ce (5:18.09.2~3-0~ubuntu-xenial) ...
-sent invalidate(passwd) request, exiting
-sent invalidate(group) request, exiting
-sent invalidate(group) request, exiting
-update-alternatives: using /usr/bin/dockerd-ce to provide /usr/bin/dockerd (dockerd) in auto mode
-Processing triggers for libc-bin (2.23-0ubuntu11) ...
-Processing triggers for ureadahead (0.100.0-19.1) ...
-Processing triggers for systemd (229-4ubuntu21.22) ...
-● docker.service - Docker Application Container Engine
-   Loaded: loaded (/lib/systemd/system/docker.service; disabled; vendor preset: enabled)
-   Active: active (running) since Thu 2019-08-08 16:39:34 UTC; 7ms ago
-     Docs: https://docs.docker.com
- Main PID: 6923 (dockerd)
-    Tasks: 8
-   Memory: 32.5M
-      CPU: 171ms
-   CGroup: /system.slice/docker.service
-           └─6923 /usr/bin/dockerd
-
-Aug 08 16:39:34 ccf7470301a6428e8e6755f7a9b26251000000 dockerd[6923]: time="2019-08-08T16:39:34.555249547Z" level=info msg="ccResolverWrapper: sending new addresses to cc: [{unix:///run/containerd/containerd.sock 0  <nil>}]" module=grpc
-Aug 08 16:39:34 ccf7470301a6428e8e6755f7a9b26251000000 dockerd[6923]: time="2019-08-08T16:39:34.555452949Z" level=info msg="ClientConn switching balancer to \"pick_first\"" module=grpc
-Aug 08 16:39:34 ccf7470301a6428e8e6755f7a9b26251000000 dockerd[6923]: time="2019-08-08T16:39:34.555695751Z" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc420611650, CONNECTING" module=grpc
-Aug 08 16:39:34 ccf7470301a6428e8e6755f7a9b26251000000 dockerd[6923]: time="2019-08-08T16:39:34.556359156Z" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc420611650, READY" module=grpc
-Aug 08 16:39:34 ccf7470301a6428e8e6755f7a9b26251000000 dockerd[6923]: time="2019-08-08T16:39:34.620465478Z" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
-Aug 08 16:39:34 ccf7470301a6428e8e6755f7a9b26251000000 dockerd[6923]: time="2019-08-08T16:39:34.658585889Z" level=info msg="Loading containers: done."
-Aug 08 16:39:34 ccf7470301a6428e8e6755f7a9b26251000000 dockerd[6923]: time="2019-08-08T16:39:34.683310790Z" level=warning msg="Not using native diff for overlay2, this may cause degraded performance for building images: kernel has CONFIG_OVERLAY_FS_REDIRECT_DIR enabled" storage-driver=overlay2
-Aug 08 16:39:34 ccf7470301a6428e8e6755f7a9b26251000000 dockerd[6923]: time="2019-08-08T16:39:34.684150697Z" level=info msg="Docker daemon" commit=6247962 graphdriver(s)=overlay2 version=18.09.2
-Aug 08 16:39:34 ccf7470301a6428e8e6755f7a9b26251000000 dockerd[6923]: time="2019-08-08T16:39:34.684488199Z" level=info msg="Daemon has completed initialization"
-Aug 08 16:39:34 ccf7470301a6428e8e6755f7a9b26251000000 systemd[1]: Started Docker Application Container Engine.
-Containers: 0
- Running: 0
- Paused: 0
- Stopped: 0
-Images: 0
-Server Version: 18.09.2
-Storage Driver: overlay2
- Backing Filesystem: extfs
- Supports d_type: true
- Native Overlay Diff: false
-Logging Driver: json-file
-Cgroup Driver: cgroupfs
-Plugins:
- Volume: local
- Network: bridge host macvlan null overlay
- Log: awslogs fluentd gcplogs gelf journald json-file local logentries splunk syslog
-Swarm: inactive
-Runtimes: runc
-Default Runtime: runc
-Init Binary: docker-init
-containerd version: 894b81a4b802e4eb2a91d1ce216b8817763c29fb
-runc version: 425e105d5a03fabd737a126ad93d62a9eeede87f
-init version: fec3683
-Security Options:
- apparmor
- seccomp
-  Profile: default
-Kernel Version: 4.15.0-1052-azure
-Operating System: Ubuntu 16.04.6 LTS
-OSType: linux
-Architecture: x86_64
-CPUs: 1
-Total Memory: 3.338GiB
-Name: ccf7470301a6428e8e6755f7a9b26251000000
-ID: GXZM:KY2B:2ZHK:C2BJ:HFGG:4N5E:7AVO:IXZO:EEU6:JHI6:6NX2:IJOE
-Docker Root Dir: /mnt/docker
-Debug Mode (client): false
-Debug Mode (server): false
-Registry: https://index.docker.io/v1/
-Labels:
-Experimental: false
-Insecure Registries:
- 127.0.0.0/8
-Live Restore Enabled: false
-Product License: Community Engine
-
-2019-08-08T16:39:34,794689497+00:00 - INFO - Docker Host Engine installed
-2019-08-08T16:39:34+00:00 - WARNING - No Docker registry servers found.
-2019-08-08T16:39:34+00:00 - WARNING - No Singularity registry servers found.
-2019-08-08T16:39:34,799751038+00:00 - INFO - Batch Insights disabled.
-2019-08-08T16:39:34,800723546+00:00 - INFO - Prometheus node exporter disabled.
-2019-08-08T16:39:34,801646654+00:00 - INFO - Prometheus cAdvisor disabled.
-2019-08-08T16:39:34,802767463+00:00 - INFO - IB device not found
-2019-08-08T16:39:34,803748271+00:00 - DEBUG - Pulling Docker Image: alfpark/blobxfer:1.7.0 (fallback: 0)
-1.7.0: Pulling from alfpark/blobxfer
-6c40cc604d8e: Pulling fs layer
-88045d3327a8: Pulling fs layer
-6c40cc604d8e: Verifying Checksum
-6c40cc604d8e: Download complete
-6c40cc604d8e: Pull complete
-88045d3327a8: Verifying Checksum
-88045d3327a8: Download complete
-88045d3327a8: Pull complete
-Digest: sha256:4332406cb7d813647d8a280bbeab36d860672e75a2ff2d4c6425c7d2e662ac13
-Status: Downloaded newer image for alfpark/blobxfer:1.7.0
-2019-08-08T16:39:39,665213648+00:00 - DEBUG - Pulling Docker Image: alfpark/batch-shipyard:3.7.1-cargo (fallback: 0)
-3.7.1-cargo: Pulling from alfpark/batch-shipyard
-e7c96db7181b: Pulling fs layer
-a4c708a2169d: Pulling fs layer
-56219147cd82: Pulling fs layer
-7a6b4378ba78: Pulling fs layer
-7a6b4378ba78: Waiting
-e7c96db7181b: Verifying Checksum
-e7c96db7181b: Download complete
-a4c708a2169d: Verifying Checksum
-a4c708a2169d: Download complete
-e7c96db7181b: Pull complete
-a4c708a2169d: Pull complete
-56219147cd82: Verifying Checksum
-56219147cd82: Download complete
-7a6b4378ba78: Verifying Checksum
-7a6b4378ba78: Download complete
-56219147cd82: Pull complete
-7a6b4378ba78: Pull complete
-Digest: sha256:afc7b667a19a0f0b63d463a5ace373a2445cba5f2816ba3fe9e361f498b83ef2
-Status: Downloaded newer image for alfpark/batch-shipyard:3.7.1-cargo
-2019-08-08T16:39:44,747864742+00:00 - DEBUG - Setting up Singularity for ubuntu 16.04
-Reading package lists...
-Building dependency tree...
-Reading state information...
-squashfs-tools is already the newest version (1:4.3-3ubuntu2.16.04.3).
-0 upgraded, 0 newly installed, 0 to remove and 7 not upgraded.
-2019-08-08T16:39:45,024822849+00:00 - DEBUG - Pulling Docker Image: alfpark/singularity:2.6.1-ubuntu-16.04 (fallback: 0)
-2.6.1-ubuntu-16.04: Pulling from alfpark/singularity
-6c40cc604d8e: Already exists
-bd9ce5aa5ef4: Pulling fs layer
-bd9ce5aa5ef4: Verifying Checksum
-bd9ce5aa5ef4: Download complete
-bd9ce5aa5ef4: Pull complete
-Digest: sha256:e00f6a963f58ff708c19298f84808ec628dae95b84ddf0c577b7c396777b0fcf
-Status: Downloaded newer image for alfpark/singularity:2.6.1-ubuntu-16.04
-Untagged: alfpark/singularity:2.6.1-ubuntu-16.04
-Untagged: alfpark/singularity@sha256:e00f6a963f58ff708c19298f84808ec628dae95b84ddf0c577b7c396777b0fcf
-Deleted: sha256:883c35bd28d5c1beeee0644ac55610bc48668aed0673e57b96b6e061f174d8d7
-Deleted: sha256:7565596a3f8395cf4f92c4cb3d8932ab071e07e6c4c990160de288634069e42f
-2019-08-08T16:40:05,208849662+00:00 - DEBUG - Kata containers not flagged for install
-2019-08-08T16:40:05,209905769+00:00 - DEBUG - BeeGFS BeeOND not flagged for install
-2019-08-08T16:40:05,246305491+00:00 - DEBUG - Pulling Docker Image: alfpark/batch-shipyard:3.7.1-cascade (fallback: 0)
-3.7.1-cascade: Pulling from alfpark/batch-shipyard
-e7c96db7181b: Already exists
-58f15b60f0d7: Pulling fs layer
-baf1f24860cc: Pulling fs layer
-212a8873363a: Pulling fs layer
-0eb42a553664: Pulling fs layer
-84e4cc0b5cd2: Pulling fs layer
-0eb42a553664: Waiting
-84e4cc0b5cd2: Waiting
-212a8873363a: Verifying Checksum
-212a8873363a: Download complete
-58f15b60f0d7: Verifying Checksum
-58f15b60f0d7: Download complete
-baf1f24860cc: Verifying Checksum
-baf1f24860cc: Download complete
-58f15b60f0d7: Pull complete
-0eb42a553664: Verifying Checksum
-0eb42a553664: Download complete
-baf1f24860cc: Pull complete
-212a8873363a: Pull complete
-0eb42a553664: Pull complete
-84e4cc0b5cd2: Verifying Checksum
-84e4cc0b5cd2: Download complete
-84e4cc0b5cd2: Pull complete
-Digest: sha256:f78cf8fc629daaa2fb4894d41641457fd7a59da3c2a00c81de881ccc9f79d6d5
-Status: Downloaded newer image for alfpark/batch-shipyard:3.7.1-cascade
-2019-08-08T16:41:00,277132471+00:00 - DEBUG - Starting Cascade
-2019-08-08T16:41:02UTC - WARNING - No Docker registry servers found.
-2019-08-08T16:41:02UTC - WARNING - No Singularity registry servers found.
