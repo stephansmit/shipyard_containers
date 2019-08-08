@@ -7,7 +7,7 @@ Containers to run [SU2](https://su2code.github.io/) with [Open MPI](https://www.
 singularity pull shub://stephansmit/containername
 ~~~~
 
-## Set up the credential to create a batch account
+## Setting up the Batch Account
 Shell in the container
 ~~~~
 singularity shell AzureCloud.master 
@@ -18,27 +18,21 @@ Login with your Microsoft account using the browser
 az login
 ~~~~
 
-Copy the 
+Create a service principle to login without authentication
+~~~~
+./create_service_principle.sh
 ~~~~
 
+Login with service principle and create the azure resources
 ~~~~
-## Run Local
-~~~~
-mpirun -np 6 singularity exec su2_containers_master.sif /SU2/bin/SU2_CFD SU2.cfg > log.txt
-~~~~
-
-
-## Run SurfSara
-~~~~
-#!/bin/bash
-#SBATCH -N 2
-#SBATCH -p normal
-#SBATCH -n 40
-
-module load mpi/openmpi/1.10.2
-mpirun --hostfile hostfile.txt -np 40 singularity exec su2_containers_master.sif /SU2/bin/SU2_CFD SU2.cfg > log.txt
+./create_azure_resources.sh
 ~~~~
 
+
+Make the credentials yaml file for Shipyard
+~~~~
+./create_shipyard_config.sh
+~~~~
 
 
 
