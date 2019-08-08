@@ -2,4 +2,4 @@ batch_shipyard:
   storage_account_settings: mystorageaccount
 global_resources:
   singularity_images:
-  - busybox
+  - shub://singularityhub/busybox
