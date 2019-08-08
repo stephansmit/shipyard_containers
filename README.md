@@ -34,5 +34,9 @@ Make the credentials yaml file for Shipyard
 ./create_shipyard_config.sh
 ~~~~
 
+## Running a shipyard Job
 
+~~~
+./shipyard_commands.sh
+~~~
 
