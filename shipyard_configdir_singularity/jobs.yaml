@@ -1,5 +1,6 @@
 job_specifications:
 - id: myjob
   tasks:
-  - command: wc -l /etc/group
-    singularity_image: shub://singularityhub/busybox
+    - singularity_image: shub://singularityhub/busybox
+      command: wc -l /etc/group
+

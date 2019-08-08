@@ -11,3 +11,4 @@ echo "BATCH_ACCOUNT_NAME=${BATCH_ACCOUNT_NAME}" >> SHIPYARD_CREDS
 echo "BATCH_ACCOUNT_SERVICEURL=${BATCH_ACCOUNT_SERVICEURL}" >> SHIPYARD_CREDS
 
 eval "echo \"$(< credentials.yaml.template)\"" > shipyard_configdir/credentials.yaml
+eval "echo \"$(< credentials.yaml.template)\"" > shipyard_configdir_singularity/credentials.yaml

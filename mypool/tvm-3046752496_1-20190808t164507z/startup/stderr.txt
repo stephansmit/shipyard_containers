@@ -1,0 +1,14 @@
+Synchronizing state of docker.service with SysV init with /lib/systemd/systemd-sysv-install...
+Executing /lib/systemd/systemd-sysv-install disable docker
+insserv: warning: current start runlevel(s) (empty) of script `docker' overrides LSB defaults (2 3 4 5).
+insserv: warning: current stop runlevel(s) (0 1 2 3 4 5 6) of script `docker' overrides LSB defaults (0 1 6).
+WARNING: API is accessible on http://127.0.0.1:2375 without encryption.
+         Access to the remote API is equivalent to root access on the host. Refer
+         to the 'Docker daemon attack surface' section in the documentation for
+         more information: https://docs.docker.com/engine/security/security/#docker-daemon-attack-surface
+WARNING: No swap limit support
+ + sh -c test -f /opt/singularity/etc/singularity/singularity.conf                     (retval=0) OK
+ + test -u /opt/singularity/libexec/singularity/bin/action-suid                        (retval=0) OK
+ + test -u /opt/singularity/libexec/singularity/bin/mount-suid                         (retval=0) OK
+ + test -u /opt/singularity/libexec/singularity/bin/start-suid                         (retval=0) OK
+WARNING: Published ports are discarded when using host network mode

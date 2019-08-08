@@ -1,0 +1,52 @@
+2019-08-08 16:41:03,009.009Z INFO cascade.py::_setup_logger:159 9:MainThread logger initialized, log file: /mnt/batch/tasks/startup/wd/cascade.log
+2019-08-08 16:41:03,010.010Z INFO cascade.py::main:1313 9:MainThread max concurrent downloads: 10
+2019-08-08 16:41:03,011.011Z DEBUG cascade.py::main:1343 9:MainThread ip address: 10.0.0.4
+2019-08-08 16:41:03,320.320Z DEBUG cascade.py::_direct_download_resources_async:758 9:MainThread blob lease 7ddaf8fb-3670-42c9-81e8-8486cd30debe acquired for resource singularity:busybox
+2019-08-08 16:41:03,320.320Z INFO cascade.py::_pull_and_save:522 9:Thread-1 pulling singularity image busybox
+2019-08-08 16:41:03,334.334Z ERROR cascade.py::run:458 9:Thread-1 singularity pull failed: stdout= stderr=ERROR: pull is only supported for shub URIs
+Traceback (most recent call last):
+  File "cascade.py", line 456, in run
+    self._pull_and_save()
+  File "cascade.py", line 549, in _pull_and_save
+    grtype, stdout, stderr))
+RuntimeError: singularity pull failed: stdout= stderr=ERROR: pull is only supported for shub URIs
+
+2019-08-08 16:41:03,343.343Z DEBUG cascade.py::run:478 9:Thread-1 blob lease released for singularity:busybox
+2019-08-08 16:41:04,323.323Z CRITICAL cascade.py::download_monitor_async:1113 9:MainThread Thread exceptions encountered, terminating
+2019-08-08 16:41:04,324.324Z ERROR cascade.py::flush:141 9:MainThread <__main__.StandardStreamLogger object at 0x7f3abd9a0ac8>
+2019-08-08 16:41:04,324.324Z ERROR cascade.py::write:137 9:MainThread Traceback (most recent call last):
+
+2019-08-08 16:41:04,324.324Z ERROR cascade.py::write:137 9:MainThread   File "cascade.py", line 1377, in <module>
+
+2019-08-08 16:41:04,325.325Z ERROR cascade.py::write:137 9:MainThread     
+2019-08-08 16:41:04,325.325Z ERROR cascade.py::write:137 9:MainThread main()
+2019-08-08 16:41:04,325.325Z ERROR cascade.py::write:137 9:MainThread   File "cascade.py", line 1353, in main
+
+2019-08-08 16:41:04,325.325Z ERROR cascade.py::write:137 9:MainThread     
+2019-08-08 16:41:04,325.325Z ERROR cascade.py::write:137 9:MainThread distribute_global_resources(loop, blob_client, table_client, ipaddress)
+2019-08-08 16:41:04,326.326Z ERROR cascade.py::write:137 9:MainThread   File "cascade.py", line 1285, in distribute_global_resources
+
+2019-08-08 16:41:04,326.326Z ERROR cascade.py::write:137 9:MainThread     
+2019-08-08 16:41:04,327.327Z ERROR cascade.py::write:137 9:MainThread loop, blob_client, table_client, ipaddress, nentities))
+2019-08-08 16:41:04,327.327Z ERROR cascade.py::write:137 9:MainThread   File "/usr/lib/python3.6/asyncio/base_events.py", line 484, in run_until_complete
+
+2019-08-08 16:41:04,327.327Z ERROR cascade.py::write:137 9:MainThread     
+2019-08-08 16:41:04,327.327Z ERROR cascade.py::write:137 9:MainThread return future.result()
+2019-08-08 16:41:04,327.327Z ERROR cascade.py::write:137 9:MainThread   File "cascade.py", line 1115, in download_monitor_async
+
+2019-08-08 16:41:04,328.328Z ERROR cascade.py::write:137 9:MainThread     
+2019-08-08 16:41:04,328.328Z ERROR cascade.py::write:137 9:MainThread raise _THREAD_EXCEPTIONS[0]
+2019-08-08 16:41:04,328.328Z ERROR cascade.py::write:137 9:MainThread   File "cascade.py", line 456, in run
+
+2019-08-08 16:41:04,328.328Z ERROR cascade.py::write:137 9:MainThread     
+2019-08-08 16:41:04,329.329Z ERROR cascade.py::write:137 9:MainThread self._pull_and_save()
+2019-08-08 16:41:04,329.329Z ERROR cascade.py::write:137 9:MainThread   File "cascade.py", line 549, in _pull_and_save
+
+2019-08-08 16:41:04,329.329Z ERROR cascade.py::write:137 9:MainThread     
+2019-08-08 16:41:04,329.329Z ERROR cascade.py::write:137 9:MainThread grtype, stdout, stderr))
+2019-08-08 16:41:04,329.329Z ERROR cascade.py::write:137 9:MainThread RuntimeError
+2019-08-08 16:41:04,329.329Z ERROR cascade.py::write:137 9:MainThread : 
+2019-08-08 16:41:04,329.329Z ERROR cascade.py::write:137 9:MainThread singularity pull failed: stdout= stderr=ERROR: pull is only supported for shub URIs
+
+2019-08-08 16:41:04,330.330Z ERROR cascade.py::flush:141 9:MainThread <__main__.StandardStreamLogger object at 0x7f3abd9a0ac8>
+2019-08-08 16:41:04,330.330Z ERROR cascade.py::flush:141 9:MainThread <__main__.StandardStreamLogger object at 0x7f3abd9a0ac8>
