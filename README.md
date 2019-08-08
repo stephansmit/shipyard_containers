@@ -1,4 +1,4 @@
-# Shipyard containers to run SU2 containers
+# Shipyard container to run containers on Azure Shipyard
 
 Containers to run containers on [Azure Shipyard](https://batch-shipyard.readthedocs.io/en/latest/00-introduction/")
 
