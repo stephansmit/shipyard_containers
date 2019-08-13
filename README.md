@@ -12,3 +12,6 @@ singularity build su2_containers_master.sif Singularity.master
 singularity pull shub://stephansmit/shipyard_containers:master 
 ~~~~
 
+Hosted on Singularity Hub:
+
+[![https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg](https://www.singularity-hub.org/static/img/hosted-singularity--hub-%23e32929.svg)](https://singularity-hub.org/collections/3377)
